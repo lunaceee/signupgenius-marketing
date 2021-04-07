@@ -35,10 +35,6 @@
       "path": "./deskStructure"
     },
     {
-      "implements": "part:@sanity/form-builder/input/image/asset-source",
-      "path": "./assetSource"
-    },
-    {
       "implements": "part:@sanity/form-builder/input-resolver",
       "path": "./parts/input-resolver"
     },
