@@ -32,6 +32,7 @@ const hiddenDocTypes = (listItem) =>
     'promoSettings',
     'headerSettings',
     'footerSettings',
+    'seoSettings',
 
     'menu',
     'redirect',
@@ -56,6 +57,15 @@ export default () =>
                     .documentId('cookieSettings')
                 )
                 .icon(FiCheckSquare),
+              S.listItem()
+              .title('Default SEO / Share')
+              .child(
+                S.editor()
+                  .id('seoSettings')
+                  .schemaType('seoSettings')
+                  .documentId('seoSettings')
+              )
+                .icon(FiGlobe),
               S.listItem()
                 .title('Promo Bar')
                 .child(

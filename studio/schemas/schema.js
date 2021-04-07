@@ -10,6 +10,7 @@ import page from "./documents/page"
 import homePage from './documents/page-home'
 import errorPage from './documents/page-error'
 
+import seoSettings from './documents/settings-seo'
 import cookieSettings from './documents/settings-cookie'
 import promoSettings from './documents/settings-promo'
 import headerSettings from './documents/settings-header'
@@ -32,7 +33,7 @@ import freeform from './blocks/freeform'
 import accordions from './blocks/accordions'
 
 // Object types
-
+import seo from './objects/seo'
 
 import navDropdown from './objects/nav-dropdown'
 import navPage from './objects/nav-page'
@@ -58,6 +59,7 @@ export default createSchema({
     page,
     errorPage,
     homePage,
+    seoSettings,
     headerSettings,
     cookieSettings,
     promoSettings,
@@ -82,7 +84,7 @@ export default createSchema({
 
     /* ----------------------- */
     /* 4: Generic Object types */
-
+    seo,
     simplePortableText,
     complexPortableText,
 
