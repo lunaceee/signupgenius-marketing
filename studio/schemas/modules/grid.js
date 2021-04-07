@@ -7,8 +7,6 @@ const getBlockNames = types => {
         return 'Freeform'
       case 'accordions':
         return 'Accordions'
-      case 'productCard':
-        return 'Product Card'
       default:
         return null
     }
@@ -57,6 +55,7 @@ export default {
       columns: 'columns'
     },
     prepare({ columns }) {
+      const name = getBlockNames(columns.map(col => col.blocks[0]._type))
 
       const image = (columns[0].blocks[0].content || []).find(
         block => block._type === 'figure'
@@ -64,7 +63,7 @@ export default {
 
       return {
         title: `${columns.length} Column${columns.length > 1 ? 's' : ''}`,
-        subtitle: "Freeform",
+        subtitle: name,
         media: image
       }
     }

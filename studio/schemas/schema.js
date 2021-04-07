@@ -7,6 +7,16 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import page from "./documents/page"
+import homePage from './documents/page-home'
+import errorPage from './documents/page-error'
+
+import cookieSettings from './documents/settings-cookie'
+import promoSettings from './documents/settings-promo'
+import headerSettings from './documents/settings-header'
+import footerSettings from './documents/settings-footer'
+import menu from './documents/menu'
+import redirect from './documents/redirect'
+
 
 // Module types
 import grid from './modules/grid'
@@ -16,19 +26,18 @@ import hero from './modules/hero'
 import marquee from './modules/marquee'
 import dividerPhoto from './modules/divider-photo'
 import newsletter from './modules/newsletter'
-import collectionGrid from './modules/collection-grid'
 
 // Block types
 import freeform from './blocks/freeform'
 import accordions from './blocks/accordions'
 
 // Object types
-import seo from './objects/seo'
 
-// import navDropdown from './objects/nav-dropdown'
-// import navPage from './objects/nav-page'
-// import navLink from './objects/nav-link'
-// import socialLink from './objects/social-link'
+
+import navDropdown from './objects/nav-dropdown'
+import navPage from './objects/nav-page'
+import navLink from './objects/nav-link'
+import socialLink from './objects/social-link'
 
 import simplePortableText from './objects/portable-simple'
 import complexPortableText from './objects/portable-complex'
@@ -47,6 +56,14 @@ export default createSchema({
     /* ----------------- */
     /* 1: Document types */
     page,
+    errorPage,
+    homePage,
+    headerSettings,
+    cookieSettings,
+    promoSettings,
+    footerSettings,
+    menu,
+    redirect,
 
     /* --------------- */
     /* 2: Module types */
@@ -57,7 +74,6 @@ export default createSchema({
     marquee,
     dividerPhoto,
     newsletter,
-    collectionGrid,
 
     /* -------------- */
     /* 3: Block types */
@@ -66,12 +82,16 @@ export default createSchema({
 
     /* ----------------------- */
     /* 4: Generic Object types */
-    seo,
 
     simplePortableText,
     complexPortableText,
 
     accordion,
     figure,
+
+    navDropdown,
+    navPage,
+    navLink,
+    socialLink
   ]),
 })

@@ -7,20 +7,20 @@ export default {
   icon: FiSend,
   fields: [
     {
-      name: 'klaviyoNote',
+      name: 'apiNote',
       type: 'note',
       options: {
         headline: 'Gotcha',
         message:
-          'You must have a Klaviyo Private API Key added to your Vercel Environment Variables for this form to work properly.',
+          'You must have a xxx Private API Key added to your Environment Variables for this form to work properly.',
         tone: 'caution'
       }
     },
     {
-      title: 'Klaviyo List ID',
-      name: 'klaviyoListID',
+      title: 'API key',
+      name: 'apiID',
       type: 'string',
-      description: 'Your Klaviyo List to subscribe emails to',
+      description: 'Your API key to subscribe emails to',
       validation: Rule => Rule.required()
     },
     {
