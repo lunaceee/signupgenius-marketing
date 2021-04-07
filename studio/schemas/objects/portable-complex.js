@@ -157,5 +157,8 @@ export default {
     {
       type: 'figure'
     },
+    {
+      type: 'youtube'
+    }
   ]
 }

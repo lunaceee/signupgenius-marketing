@@ -44,7 +44,7 @@ import complexPortableText from './objects/portable-complex'
 
 import accordion from './objects/accordion'
 import figure from './objects/figure'
-
+import youtube from './objects/youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -88,6 +88,7 @@ export default createSchema({
 
     accordion,
     figure,
+    youtube,
 
     navDropdown,
     navPage,

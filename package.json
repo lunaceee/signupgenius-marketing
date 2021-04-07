@@ -1,0 +1,12 @@
+{
+  "name": "signupgenius.com",
+  "version": "1.0.0",
+  "description": "SignUpGenius marketing site",
+  "main": "index.js",
+  "repository": "git@gitlab.com:lmv-marketing/sug-marketing-site.git",
+  "author": "luna yu <luna.yu@lumaverse.com>",
+  "dependencies": {
+    "get-youtube-id": "^1.0.1",
+    "react-youtube": "^7.13.1"
+  }
+}
