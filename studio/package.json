@@ -20,6 +20,7 @@
     "@sanity/default-layout": "^2.7.4",
     "@sanity/default-login": "^2.7.0",
     "@sanity/desk-tool": "^2.7.4",
+    "@sanity/form-builder": "^2.7.4",
     "@sanity/vision": "^2.7.4",
     "media-library": "^1.2.4",
     "prop-types": "^15.7",
