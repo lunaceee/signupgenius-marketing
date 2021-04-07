@@ -7943,6 +7943,13 @@ sanity-plugin-content-model-graph@^1.1.1:
     styled-components "5.1.0"
     viz.js "2.1.2"
 
+sanity-plugin-media-library@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/sanity-plugin-media-library/-/sanity-plugin-media-library-1.0.5.tgz#28aa3e6ea2f6e7f30b624550484287a152ce29cd"
+  integrity sha512-/lrErqAt0KPwukUJyiuBeOH0uiggIgf3gdhAxgJYT/UFKqFEpJTpZBfGIfDjdUk6+5mFx2L2g7gTJpLthzEzFg==
+  dependencies:
+    styled-components "^5.2.1"
+
 sanity-plugin-note-field@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/sanity-plugin-note-field/-/sanity-plugin-note-field-1.1.1.tgz#f181736d4acc82922e80478945c46d8b39161b2b"
