@@ -17,6 +17,11 @@ export default {
         { type: 'dividerPhoto' }
       ]
     },
+    {
+      title: 'SEO / Share Settings',
+      name: 'seo',
+      type: 'seo'
+    }
   ],
   preview: {
     prepare() {
