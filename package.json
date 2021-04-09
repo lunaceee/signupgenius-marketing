@@ -6,6 +6,7 @@
   "repository": "git@gitlab.com:lmv-marketing/sug-marketing-site.git",
   "author": "luna yu <luna.yu@lumaverse.com>",
   "dependencies": {
+    "classnames": "^2.3.1",
     "get-youtube-id": "^1.0.1",
     "react-youtube": "^7.13.1"
   }
