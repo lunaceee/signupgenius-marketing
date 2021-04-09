@@ -4,6 +4,7 @@ import EyeIcon from 'part:@sanity/base/eye-icon'
 import EditIcon from 'part:@sanity/base/edit-icon'
 
 import {
+  FiGift,
   FiAnchor,
   FiHome,
   FiSettings,
@@ -27,6 +28,8 @@ const hiddenDocTypes = (listItem) =>
     'homePage',
     'errorPage',
     'page',
+    'post',
+    'person',
 
     'cookieSettings',
     'promoSettings',
@@ -35,6 +38,7 @@ const hiddenDocTypes = (listItem) =>
     'seoSettings',
 
     'menu',
+    'tag',
     'redirect',
   ].includes(listItem.getId())
 
@@ -74,7 +78,7 @@ export default () =>
                     .schemaType('promoSettings')
                     .documentId('promoSettings')
                 )
-                .icon(FiTag),
+                .icon(FiGift),
               S.listItem()
                 .title('Header')
                 .child(
@@ -108,12 +112,23 @@ export default () =>
                 .child(S.documentTypeList('menu').title('Menus'))
                 .icon(FiMenu),
               S.listItem()
+                .title('Tags')
+                .child(S.documentTypeList('tag').title('Tags'))
+                .icon(FiTag),
+              S.listItem()
                 .title('Redirects')
                 .child(S.documentTypeList('redirect').title('Redirects'))
                 .icon(FiRepeat),
             ])
         )
         .icon(FiSettings),
+      S.listItem()
+      .title('Persons')
+      .schemaType('person')
+      .child(
+        S.documentTypeList('person')
+          .title('Persons')
+      ),
       S.divider(),
       S.listItem()
         .title('Home')
@@ -154,7 +169,29 @@ export default () =>
                 ])
             )
         ),
+        S.divider(),
+        S.listItem()
+        .title('Posts')
+        .schemaType('post')
+        .child(
+          S.documentTypeList('post')
+            .title('Posts')
+            .child((documentId) =>
+              S.document()
+                .documentId(documentId)
+                .schemaType('post')
+                .views([
+                  S.view.form().icon(EditIcon),
+                  S.view
+                    .component(SeoPreview)
+                    .options({ previewURL })
+                    .icon(EyeIcon)
+                    .title('SEO Preview'),
+                ])
+            )
+        ),
       S.divider(),
+ 
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
