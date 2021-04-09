@@ -159,6 +159,12 @@ export default {
     },
     {
       type: 'youtube'
+    },
+    {
+      type: 'carousel'
+    },
+    {
+      type: 'sampleSignups'
     }
   ]
 }

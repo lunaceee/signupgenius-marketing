@@ -2,6 +2,7 @@
 import React from 'react'
 import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
+import { FiYoutube } from 'react-icons/fi'
 
 const YouTubePreview = ({value}) => {
 	const { url } = value
@@ -12,7 +13,8 @@ const YouTubePreview = ({value}) => {
 export default {
   name: 'youtube',
   type: 'object',
-  title: 'YouTube Embed',
+  title: 'YouTube',
+  icon: FiYoutube,
   fields: [
     {
       name: 'url',

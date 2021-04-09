@@ -7,8 +7,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import page from "./documents/page"
+import post from "./documents/post"
 import homePage from './documents/page-home'
 import errorPage from './documents/page-error'
+import person from './documents/person'
 
 import seoSettings from './documents/settings-seo'
 import cookieSettings from './documents/settings-cookie'
@@ -17,6 +19,7 @@ import headerSettings from './documents/settings-header'
 import footerSettings from './documents/settings-footer'
 import menu from './documents/menu'
 import redirect from './documents/redirect'
+import tag from './documents/tag'
 
 
 // Module types
@@ -27,6 +30,8 @@ import hero from './modules/hero'
 import marquee from './modules/marquee'
 import dividerPhoto from './modules/divider-photo'
 import newsletter from './modules/newsletter'
+import carousel from './modules/carousel'
+import sampleSignups from './modules/sign-ups'
 
 // Block types
 import freeform from './blocks/freeform'
@@ -45,6 +50,7 @@ import complexPortableText from './objects/portable-complex'
 
 import accordion from './objects/accordion'
 import figure from './objects/figure'
+import carouselItem from "./objects/carousel-item"
 import youtube from './objects/youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -57,6 +63,7 @@ export default createSchema({
     /* ----------------- */
     /* 1: Document types */
     page,
+    post,
     errorPage,
     homePage,
     seoSettings,
@@ -66,6 +73,8 @@ export default createSchema({
     footerSettings,
     menu,
     redirect,
+    person,
+    tag,
 
     /* --------------- */
     /* 2: Module types */
@@ -76,6 +85,9 @@ export default createSchema({
     marquee,
     dividerPhoto,
     newsletter,
+    carousel,
+    sampleSignups,
+
 
     /* -------------- */
     /* 3: Block types */
@@ -95,6 +107,7 @@ export default createSchema({
     navDropdown,
     navPage,
     navLink,
-    socialLink
+    socialLink,
+    carouselItem
   ]),
 })
