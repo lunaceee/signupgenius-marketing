@@ -17,7 +17,13 @@ import {
   FiCheckSquare,
   FiFileText,
   FiUsers,
-  FiTrendingUp
+  FiSmile,
+  FiPrinter,
+  FiFolder,
+  FiAward,
+  FiDollarSign,
+  FiBox,
+  FiLinkedin
 } from 'react-icons/fi'
 
 import SeoPreview from './components/previews/seo/seo-preview'
@@ -123,14 +129,7 @@ export default () =>
         )
         .icon(FiSettings),
       S.divider(),
-      S.listItem()
-      .title('Persons')
-      .schemaType('person')
-      .child(
-        S.documentTypeList('person')
-          .title('Persons')
-      ),
-      S.divider(),
+
       
       // Pages
       S.listItem()
@@ -158,25 +157,7 @@ export default () =>
                             .title('SEO Preview'),
                         ])
                   )
-              ),
-              S.listItem()
-              .title('Help')
-                .child(
-                  S.editor()
-                  .id('help')
-                  .schemaType('page')
-                  .documentId('help')
-              )
-              .icon(FiUsers),
-              S.listItem()
-              .title('Careers')
-                .child(
-                  S.editor()
-                  .id('careers')
-                  .documentId('careers')
-                  .schemaType('page')
-              )
-              .icon(FiTrendingUp),
+              ).icon(FiFolder),
               S.listItem()
                 .title('Home')
                 .child(
@@ -194,9 +175,63 @@ export default () =>
                         .title('SEO Preview'),
                     ])
                 )
-                .icon(FiHome),
+              .icon(FiHome),
+              S.listItem()
+              .title('Help')
+                .child(
+                  S.editor()
+                  .id('help')
+                  .schemaType('page')
+                  .documentId('help')
+              )
+              .icon(FiPrinter),
+              S.listItem()
+              .title('Careers')
+                .child(
+                  S.editor()
+                  .id('careers')
+                  .documentId('careers')
+                  .schemaType('page')
+              )
+              .icon(FiLinkedin),
+              S.listItem()
+              .title('About')
+                .child(
+                  S.editor()
+                  .id('about')
+                  .schemaType('page')
+                  .documentId('about')
+              )
+              .icon(FiSmile),
+              S.listItem()
+              .title('Pricing')
+                .child(
+                  S.editor()
+                  .id('pricing')
+                  .schemaType('page')
+                  .documentId('pricing')
+              )
+              .icon(FiDollarSign),
+              S.listItem()
+              .title('Features')
+                .child(
+                  S.editor()
+                  .id('features')
+                  .schemaType('page')
+                  .documentId('features')
+              )
+              .icon(FiBox),
+              S.listItem()
+              .title('Testimonial')
+                .child(
+                  S.editor()
+                  .id('testimonial')
+                  .schemaType('page')
+                  .documentId('testimonial')
+              )
+              .icon(FiAward),
             ]),
-        ),
+        ).icon(FiFolder),
       S.divider(),
       // Posts
       S.listItem()
@@ -218,7 +253,15 @@ export default () =>
                     .title('SEO Preview'),
                 ])
             )
-        ),
+        ).icon(FiFolder),
+      S.divider(),
+      S.listItem()
+      .title('Persons')
+      .schemaType('person')
+      .child(
+        S.documentTypeList('person')
+          .title('Persons')
+      ).icon(FiUsers),
       S.divider(),
       S.listItem()
         .title('Tags')
