@@ -15,6 +15,11 @@ export default {
       title: 'URL',
       name: 'url',
       type: 'url'
+    },
+    {
+      title: 'Carousel description',
+      name: 'carouselDescription',
+      type: 'simplePortableText'
     }
   ],
 }

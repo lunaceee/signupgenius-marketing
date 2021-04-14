@@ -15,6 +15,9 @@ import {
   FiRepeat,
   FiTag,
   FiCheckSquare,
+  FiFileText,
+  FiUsers,
+  FiTrendingUp
 } from 'react-icons/fi'
 
 import SeoPreview from './components/previews/seo/seo-preview'
@@ -36,9 +39,10 @@ const hiddenDocTypes = (listItem) =>
     'headerSettings',
     'footerSettings',
     'seoSettings',
+    'quotes',
+    'tag',
 
     'menu',
-    'tag',
     'redirect',
   ].includes(listItem.getId())
 
@@ -112,16 +116,13 @@ export default () =>
                 .child(S.documentTypeList('menu').title('Menus'))
                 .icon(FiMenu),
               S.listItem()
-                .title('Tags')
-                .child(S.documentTypeList('tag').title('Tags'))
-                .icon(FiTag),
-              S.listItem()
                 .title('Redirects')
                 .child(S.documentTypeList('redirect').title('Redirects'))
                 .icon(FiRepeat),
             ])
         )
         .icon(FiSettings),
+      S.divider(),
       S.listItem()
       .title('Persons')
       .schemaType('person')
@@ -130,47 +131,75 @@ export default () =>
           .title('Persons')
       ),
       S.divider(),
-      S.listItem()
-        .title('Home')
-        .child(
-          S.document()
-            .title('Home Page')
-            .id('homePage')
-            .documentId('homePage')
-            .schemaType('homePage')
-            .views([
-              S.view.form().icon(EditIcon),
-              S.view
-                .component(SeoPreview)
-                .options({ previewURL })
-                .icon(EyeIcon)
-                .title('SEO Preview'),
-            ])
-        )
-        .icon(FiHome),
-      S.divider(),
+      
+      // Pages
       S.listItem()
         .title('Pages')
-        .schemaType('page')
         .child(
-          S.documentTypeList('page')
+          S.list()
             .title('Pages')
-            .child((documentId) =>
-              S.document()
-                .documentId(documentId)
+            .items([
+              S.listItem()
+                .title('Landing pages')
                 .schemaType('page')
-                .views([
-                  S.view.form().icon(EditIcon),
-                  S.view
-                    .component(SeoPreview)
-                    .options({ previewURL })
-                    .icon(EyeIcon)
-                    .title('SEO Preview'),
-                ])
-            )
+                .child(
+                  S.documentTypeList('page')
+                    .title('Landing pages')
+                    .child((documentId) =>
+                      S.document()
+                        .documentId(documentId)
+                        .schemaType('page')
+                        .views([
+                          S.view.form().icon(EditIcon),
+                          S.view
+                            .component(SeoPreview)
+                            .options({ previewURL })
+                            .icon(EyeIcon)
+                            .title('SEO Preview'),
+                        ])
+                  )
+              ),
+              S.listItem()
+              .title('Help')
+                .child(
+                  S.editor()
+                  .id('help')
+                  .schemaType('page')
+                  .documentId('help')
+              )
+              .icon(FiUsers),
+              S.listItem()
+              .title('Careers')
+                .child(
+                  S.editor()
+                  .id('careers')
+                  .documentId('careers')
+                  .schemaType('page')
+              )
+              .icon(FiTrendingUp),
+              S.listItem()
+                .title('Home')
+                .child(
+                  S.document()
+                    .title('Home Page')
+                    .id('homePage')
+                    .documentId('homePage')
+                    .schemaType('homePage')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
+                )
+                .icon(FiHome),
+            ]),
         ),
-        S.divider(),
-        S.listItem()
+      S.divider(),
+      // Posts
+      S.listItem()
         .title('Posts')
         .schemaType('post')
         .child(
@@ -191,7 +220,16 @@ export default () =>
             )
         ),
       S.divider(),
- 
+      S.listItem()
+        .title('Tags')
+        .child(S.documentTypeList('tag').title('Tags'))
+        .icon(FiTag),
+      S.divider(),
+      S.listItem()
+        .title('Quotes')
+        .child(S.documentTypeList('quotes').title('Quotes'))
+        .icon(FiFileText),
+      S.divider(),
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

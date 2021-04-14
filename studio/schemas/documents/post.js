@@ -27,9 +27,25 @@ export default {
       type: 'seo'
     },
     {
+      title: 'Tags',
+      name: 'blogPostTags',
+      type: 'array',
+      of: [{
+        type: 'reference', to: { type: 'tag'}
+      }]
+    },
+    {
       title: 'Content',
       name: 'content',
       type: 'complexPortableText'
+    },
+    {
+      title: 'Related articles',
+      name: 'relatedArticles',
+      type: 'array',
+      of: [
+        {type: 'reference', to: { type: 'post'}}
+      ]
     }
   ],
   preview: {

@@ -16,6 +16,7 @@ export default {
       name: 'slug',
       type: 'slug',
       description: '(required)',
+      validation: Rule => Rule.required(),
       options: {
         source: 'title',
         maxLength: 96
@@ -40,7 +41,16 @@ export default {
       title: 'Department',
       name: 'department',
       type: 'string'
-    }
+    },
+    {
+      title: 'Is active?',
+      description: 'Is the person still working at Lumaverse?',
+      name: 'isActive',
+      type: 'boolean',
+      options: {
+        layout: 'radio'
+      }
+    },
   ],
   preview: {
     select: {

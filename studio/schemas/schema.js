@@ -20,7 +20,7 @@ import footerSettings from './documents/settings-footer'
 import menu from './documents/menu'
 import redirect from './documents/redirect'
 import tag from './documents/tag'
-
+import quotes from './documents/quotes'
 
 // Module types
 import grid from './modules/grid'
@@ -75,6 +75,7 @@ export default createSchema({
     redirect,
     person,
     tag,
+    quotes,
 
     /* --------------- */
     /* 2: Module types */
