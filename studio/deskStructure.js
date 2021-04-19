@@ -23,7 +23,8 @@ import {
   FiAward,
   FiDollarSign,
   FiBox,
-  FiLinkedin
+  FiLinkedin,
+  FiTv
 } from 'react-icons/fi'
 
 import SeoPreview from './components/previews/seo/seo-preview'
@@ -230,6 +231,15 @@ export default () =>
                   .documentId('testimonial')
               )
               .icon(FiAward),
+              S.listItem()
+              .title('Press kit')
+                .child(
+                  S.editor()
+                  .id('presskit')
+                  .schemaType('page')
+                  .documentId('presskit')
+              )
+              .icon(FiTv),
             ]),
         ).icon(FiFolder),
       S.divider(),
