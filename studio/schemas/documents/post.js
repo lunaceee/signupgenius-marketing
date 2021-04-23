@@ -46,6 +46,23 @@ export default {
       of: [
         {type: 'reference', to: { type: 'post'}}
       ]
+    },
+    {
+      title: 'Quotes',
+      name: 'relatedQuotes',
+      type: 'reference',
+      to: { type: 'quotes'}
+    },
+    {
+      title: 'Ad block',
+      name: 'adBlock',
+      type: 'array',
+      of: [
+        {type: "string", title: "Title"},
+        {type: "figure", title: "Thumbnail"},
+        {type: "link", name: "primaryCta", title: "Primary CTA"},
+        {type: 'link', name:"secondaryCta", title: "Secondary CTA"}
+      ]
     }
   ],
   preview: {

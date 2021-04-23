@@ -51,6 +51,15 @@ export default {
         layout: 'radio'
       }
     },
+    {
+      title: 'Is employee?',
+      description: 'Is the person an employee of Lumaverse?',
+      name: 'isEmployee',
+      type: 'boolean',
+      options: {
+        layout: 'radio'
+      }
+    },
   ],
   preview: {
     select: {
