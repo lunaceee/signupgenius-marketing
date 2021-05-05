@@ -4,7 +4,7 @@
   "description": "SignUpGenius marketing site",
   "main": "index.js",
   "repository": "git@gitlab.com:lmv-marketing/sug-marketing-site.git",
-  "author": "luna yu <luna.yu@lumaverse.com>",
+  "author": "luna yu <lunaceee@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
