@@ -1,0 +1,101 @@
+/* Variables */
+:root {
+  /* colors */
+  --black: hsl(0,0%, 0%); /* #000000 */
+  --darkest-gray: hsl(0, 0%, 13%); /* #222222 */
+  --dark-gray: #474747; /* #474747 */
+  --gray: hsl(0, 0%, 47%); /* #777777 */
+  --light-gray: #918c8a; /* #918c8a */
+  --lighter-gray: hsl(180, 1%, 83%); /* #d4d5d5 */
+  --lightest-gray: hsl(240, 5%, 96%); /* #f4f4f5 */
+  --white: hsl(0, 0%, 100%); /* #ffffff */
+
+  --dark-orange: hsl(24, 87%, 56%); /* #F17A2D */
+  --orange: hsl(31, 92%, 54%); /* #F68B1C */
+  --light-orange:#F8A754; /* #F8A754 */
+  --lighter-orange:  hsl(31, 92%, 77%); /* #FAC58D */
+  --lightest-orange: hsl(31, 93%, 84%); /* #FCD6AE */
+
+  --dark-green: hsl(74, 50%, 41%); /* #859D34 */
+  --green: hsl(69, 57%, 48%); /* #acc034 */
+  --light-green:hsl(69, 52%, 61%); /* #C0CF66 */
+  --lighter-green: hsl(69, 52%, 74%); /* #D5DF99 */
+  --lightest-green: hsl(68, 53%, 82%); /* #E2E9B7 */
+
+  --yellow: hsl(55, 100%, 78%); /* #fff590*/
+  --light-yellow: hsl(54, 100%, 84%); /* #FFF7AB */
+  --lighter-yellow: hsl(55, 100%, 89%); /* #fffac7 */
+  --lightest-yellow: hsl(57, 85%, 95%); /* #fdfce6 */
+
+  --brown: hsl(42, 88%, 33%); /* #9d700a */
+  --light-brown: hsl(42, 44%, 49%); /* #b59346 */
+  --lighter-brown: hsl(41, 43%, 66%); /* #CEB784 */
+  --lightest-brown: hsl(42, 43%, 76%); /* #DCCCA8 */
+
+  --red: hsl(0, 56%, 51%); /* #c83c3b */
+  --light-red: hsl(1, 56%, 63%); /* #d56c6b */
+  --lighter-red: hsl(1, 56%, 75%); /* #e39d9c */
+  --lightest-red: hsl(1, 57%, 83%); /* #ecbab9 */
+
+  --blue: hsl(207, 85%, 39%); /* #0f6cb6 */
+  --light-blue: hsl(207, 53%, 54%); /* #4A90C8 */
+  --lighter-blue: hsl(206, 53%, 69%); /* #86B5DA */
+  --lightest-blue: hsl(206, 53%, 78%); /* #aacbe5 */
+
+  /* Functionality based names for colors */
+
+
+  /* Background colors */
+  --colorBase: var(--darkest-gray);
+  --colorPrimaryBg: var(--orange);
+  --colorPrimaryBgHover: var(--dark-orange);
+  --colorPrimaryBgInverse: var(--lightest-orange);
+
+  --colorSecondaryBg: var(--green);
+  --colorSecondaryBgHover: var(--dark-green);
+  --colorSecondaryBgInverse: var(--lightest-green);
+
+  --colorTeriaryBg: var(--yellow);
+  --colorTeriaryBgHover: var(--light-yellow);
+
+  /* Text colors */
+  --colorText: var(--darkest-gray);
+  --colorTextLoud: var(--black);
+  --colorTextMuted: var(--gray);
+  --colorTextInverse: var(--white);
+  --colorTextMutedInverse: var(--lightest-gray);
+  --colorPlaceholder: var(--gray);
+
+  /* Status colors */
+  --colorSuccess: var(--green);
+  --colorError: var(--red);
+  --colorWarning: var(--brown);
+  --colorInfo: var(--blue);
+
+  /* Dropshadows */
+  --neutralShadow: 0 2px 16px -2px color(var(--colorBase) a(0.85))
+  --neutralShadowHover: 0 10px 40px -10px color(var(--colorBase) a(.65))
+  --neutralShadowStrong: 0 30px 100px -30px color(var(--colorBase) a(.65))
+  --primaryShadow: 0 3px 30px -3px color(var(--colorPrimaryBg) a(.75))
+  --primaryShadowHover: 0 10px 50px -10px color(var(--colorPrimaryBg) a(.35))
+  --primaryShadowStrong: 0 30px 100px -30px color(var(--colorPrimaryBg) a(.40))
+  --secondaryShadow: 0 3px  30px -3px color(var(--colorSecondaryBg) a(.75))
+  --secondaryShadowHover: 0 10px 50px -10px color(var(--colorSecondaryBg) a(.35))
+  --secondaryShadowStrong: 0 30px 100px -30px color(var(--colorSecondaryBg) a(.40))
+  --tertiaryShadow: 0 3px 30px -3px color(var(--colorTeriaryBg) a(.75))
+  --tertiaryShadowHover: 0 10px 50px -10px color(var(--colorTeriaryBg) a(.35))
+  --tertiaryShadowStrong: 0 30px 100px -30px color(var(--colorTeriaryBg) a(.40))
+}
+
+
+@custom-media --xs (min-width: 480px);
+@custom-media --sm (min-width: 768px);
+@custom-media --md (min-width: 940px);
+@custom-media --lg (min-width: 1200px);
+@custom-media --xl (min-width: 1600px);
+
+@custom-media --xsMax (max-width: 479px);
+@custom-media --smMax (max-width: 767px);
+@custom-media --mdMax (max-width: 939px);
+@custom-media --lgMax (max-width: 1199px);
+@custom-media --xlMax (max-width: 1599px);

@@ -1,0 +1,3 @@
+.primary-btn {
+  @apply appearance-none no-underline cursor-pointer font-inherit;
+}
