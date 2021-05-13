@@ -56,7 +56,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      primary: 'colorPrimaryBg'
+      primary: 'var(--colorPrimaryBg)',
+      pageBG: 'var(--pageBG)',
+      pageText: 'var(--pageText)',
     },
     screens: {
       xs: '480px',
