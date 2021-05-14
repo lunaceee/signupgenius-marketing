@@ -1,6 +1,4 @@
-
-import ConditionalFields from '../../components/conditional-field'
-import {FiLink2} from 'react-icons/fi'
+import { FiLink2 } from 'react-icons/fi'
 
 export default {
   title: 'Link',
@@ -27,43 +25,8 @@ export default {
       type: 'boolean'
     },
     {
-      name: 'styles',
-      type: 'object',
-      inputComponent: ConditionalFields,
-      fields: [
-        {
-          title: 'Button Style',
-          name: 'style',
-          type: 'string',
-          options: {
-            list: [
-              { title: 'Default', value: '' },
-              { title: 'Primary', value: 'is-primary' },
-              { title: 'White', value: 'is-white' }
-            ],
-            layout: 'radio'
-          }
-        },
-        {
-          title: 'Large Size',
-          name: 'isLarge',
-          type: 'boolean',
-          options: {
-            layout: 'checkbox'
-          }
-        },
-        {
-          title: 'Full Width',
-          name: 'isBlock',
-          type: 'boolean',
-          options: {
-            layout: 'checkbox'
-          }
-        }
-      ],
-      options: {
-        condition: (document, context) => context().isButton === true
-      }
+      name: 'linkStyles',
+      type: 'styles'
     }
   ]
 }

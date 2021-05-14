@@ -36,6 +36,10 @@ import sampleSignups from './modules/sign-ups'
 // Block types
 import freeform from './blocks/freeform'
 import accordions from './blocks/accordions'
+import photos from "./blocks/photos"
+import videos from './blocks/videos'
+import marqueeItems from "./blocks/items"
+import adBlock from "./blocks/adBlock"
 
 // Object types
 import seo from './objects/seo'
@@ -45,6 +49,8 @@ import navPage from './objects/nav-page'
 import navLink from './objects/nav-link'
 import socialLink from './objects/social-link'
 import link from "./objects/link"
+import simple from "./objects/simple"
+import styles from "./objects/styles"
 
 import simplePortableText from './objects/portable-simple'
 import complexPortableText from './objects/portable-complex'
@@ -95,6 +101,11 @@ export default createSchema({
     /* 3: Block types */
     freeform,
     accordions,
+    videos,
+    photos,
+    marqueeItems,
+    adBlock,
+    styles,
 
     /* ----------------------- */
     /* 4: Generic Object types */
@@ -102,6 +113,7 @@ export default createSchema({
     simplePortableText,
     complexPortableText,
     link,
+    simple,
 
     accordion,
     figure,

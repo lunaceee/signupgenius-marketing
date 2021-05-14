@@ -31,7 +31,7 @@ export default {
       name: 'blogPostTags',
       type: 'array',
       of: [{
-        type: 'reference', to: { type: 'tag'}
+        type: 'reference', to: { type: 'tag' }
       }]
     },
     {
@@ -44,25 +44,18 @@ export default {
       name: 'relatedArticles',
       type: 'array',
       of: [
-        {type: 'reference', to: { type: 'post'}}
+        { type: 'reference', to: { type: 'post' } }
       ]
     },
     {
       title: 'Quotes',
       name: 'relatedQuotes',
       type: 'reference',
-      to: { type: 'quotes'}
+      to: { type: 'quotes' }
     },
     {
-      title: 'Ad block',
-      name: 'adBlock',
-      type: 'array',
-      of: [
-        {type: "string", title: "Title"},
-        {type: "figure", title: "Thumbnail"},
-        {type: "link", name: "primaryCta", title: "Primary CTA"},
-        {type: 'link', name:"secondaryCta", title: "Secondary CTA"}
-      ]
+      name: 'adBlockParent',
+      type: 'adBlock',
     }
   ],
   preview: {
