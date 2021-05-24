@@ -24,7 +24,7 @@ import {
   FiDollarSign,
   FiBox,
   FiLinkedin,
-  FiTv
+  FiTv,
 } from 'react-icons/fi'
 
 import SeoPreview from './components/previews/seo/seo-preview'
@@ -38,6 +38,7 @@ const hiddenDocTypes = (listItem) =>
     'homePage',
     'errorPage',
     'page',
+    'landingPage',
     'post',
     'person',
 
@@ -73,13 +74,13 @@ export default () =>
                 )
                 .icon(FiCheckSquare),
               S.listItem()
-              .title('Default SEO / Share')
-              .child(
-                S.editor()
-                  .id('seoSettings')
-                  .schemaType('seoSettings')
-                  .documentId('seoSettings')
-              )
+                .title('Default SEO / Share')
+                .child(
+                  S.editor()
+                    .id('seoSettings')
+                    .schemaType('seoSettings')
+                    .documentId('seoSettings')
+                )
                 .icon(FiGlobe),
               S.listItem()
                 .title('Promo Bar')
@@ -117,7 +118,7 @@ export default () =>
                     .documentId('errorPage')
                 )
                 .icon(FiAlertOctagon),
-              
+
               S.listItem()
                 .title('Menus')
                 .child(S.documentTypeList('menu').title('Menus'))
@@ -131,7 +132,7 @@ export default () =>
         .icon(FiSettings),
       S.divider(),
 
-      
+
       // Pages
       S.listItem()
         .title('Pages')
@@ -141,14 +142,14 @@ export default () =>
             .items([
               S.listItem()
                 .title('Landing pages')
-                .schemaType('page')
+                .schemaType('landingPage')
                 .child(
-                  S.documentTypeList('page')
+                  S.documentTypeList('landingPage')
                     .title('Landing pages')
                     .child((documentId) =>
                       S.document()
                         .documentId(documentId)
-                        .schemaType('page')
+                        .schemaType('landingPage')
                         .views([
                           S.view.form().icon(EditIcon),
                           S.view
@@ -157,8 +158,8 @@ export default () =>
                             .icon(EyeIcon)
                             .title('SEO Preview'),
                         ])
-                  )
-              ).icon(FiFolder),
+                    )
+                ).icon(FiFolder),
               S.listItem()
                 .title('Home')
                 .child(
@@ -176,70 +177,79 @@ export default () =>
                         .title('SEO Preview'),
                     ])
                 )
-              .icon(FiHome),
+                .icon(FiHome),
               S.listItem()
-              .title('Help')
+                .title('Help')
                 .child(
                   S.editor()
-                  .id('help')
-                  .schemaType('page')
-                  .documentId('help')
-              )
-              .icon(FiPrinter),
+                    .id('help')
+                    .schemaType('page')
+                    .documentId('help')
+                )
+                .icon(FiPrinter),
               S.listItem()
-              .title('Careers')
+                .title('Careers')
                 .child(
                   S.editor()
-                  .id('careers')
-                  .documentId('careers')
-                  .schemaType('page')
-              )
-              .icon(FiLinkedin),
+                    .id('careers')
+                    .documentId('careers')
+                    .schemaType('page')
+                )
+                .icon(FiLinkedin),
               S.listItem()
-              .title('About')
+                .title('About')
                 .child(
                   S.editor()
-                  .id('about')
-                  .schemaType('page')
-                  .documentId('about')
-              )
-              .icon(FiSmile),
+                    .id('about')
+                    .schemaType('page')
+                    .documentId('about')
+                )
+                .icon(FiSmile),
               S.listItem()
-              .title('Pricing')
+                .title('Pricing')
                 .child(
                   S.editor()
-                  .id('pricing')
-                  .schemaType('page')
-                  .documentId('pricing')
-              )
-              .icon(FiDollarSign),
+                    .id('pricing')
+                    .schemaType('page')
+                    .documentId('pricing')
+                )
+                .icon(FiDollarSign),
               S.listItem()
-              .title('Features')
+                .title('Features')
                 .child(
                   S.editor()
-                  .id('features')
-                  .schemaType('page')
-                  .documentId('features')
-              )
-              .icon(FiBox),
+                    .id('features')
+                    .schemaType('page')
+                    .documentId('features')
+                )
+                .icon(FiBox),
               S.listItem()
-              .title('Testimonial')
+                .title('Testimonial')
                 .child(
                   S.editor()
-                  .id('testimonial')
-                  .schemaType('page')
-                  .documentId('testimonial')
-              )
-              .icon(FiAward),
+                    .id('testimonial')
+                    .schemaType('page')
+                    .documentId('testimonial')
+                )
+                .icon(FiAward),
               S.listItem()
-              .title('Press kit')
+                .title('Press kit')
                 .child(
                   S.editor()
-                  .id('presskit')
-                  .schemaType('page')
-                  .documentId('presskit')
-              )
-              .icon(FiTv),
+                    .id('presskit')
+                    .schemaType('page')
+                    .documentId('presskit')
+                )
+                .icon(FiTv),
+              S.listItem()
+                .title('Terms and conditions')
+                .child(
+                  S.editor()
+                    .id('termsandconditions')
+                    .schemaType('page')
+                    .documentId('termsandconditions')
+                )
+                .icon(FiFileText),
             ]),
         ).icon(FiFolder),
       S.divider(),
@@ -266,12 +276,12 @@ export default () =>
         ).icon(FiFolder),
       S.divider(),
       S.listItem()
-      .title('Persons')
-      .schemaType('person')
-      .child(
-        S.documentTypeList('person')
-          .title('Persons')
-      ).icon(FiUsers),
+        .title('Persons')
+        .schemaType('person')
+        .child(
+          S.documentTypeList('person')
+            .title('Persons')
+        ).icon(FiUsers),
       S.divider(),
       S.listItem()
         .title('Tags')
