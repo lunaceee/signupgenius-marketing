@@ -36,16 +36,17 @@ export default {
       fieldset: 'footerBlock1'
     },
     {
-      title: 'Newsletter',
-      name: 'newsletter',
-      type: 'newsletter',
-      fieldset: 'footerBlock1'
-    },
-    {
       title: 'Block Title',
       name: 'blockTitle2',
       type: 'string',
       fieldset: 'footerBlock2'
+    },
+    {
+      title: 'Block Menu',
+      name: 'blockMenu1',
+      type: 'reference',
+      to: [{ type: 'menu' }],
+      fieldset: 'footerBlock1'
     },
     {
       title: 'Block Menu',
@@ -79,7 +80,13 @@ export default {
       type: 'array',
       of: [{ type: 'socialLink' }],
       fieldset: 'footerBlock4'
-    }
+    },
+    {
+      title: 'Newsletter',
+      name: 'newsletter',
+      type: 'newsletter',
+      fieldset: 'footerBlock4'
+    },
   ],
   preview: {
     prepare() {

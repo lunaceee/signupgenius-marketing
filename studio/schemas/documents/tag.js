@@ -29,6 +29,6 @@ export default {
       name: 'description',
       type: 'string',
       description: 'Add context to the tag'
-    }
+    },
   ]
 }

@@ -11,27 +11,28 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'Default', value: '' },
+          // { title: 'Default', value: '' },
           { title: 'Primary', value: 'is-primary' },
-          { title: 'White', value: 'is-white' }
+          { title: 'Secondary', value: 'is-secondary' },
+          { title: 'Tertiary', value: 'is-tertiary' },
+          { title: 'Ghost', value: 'is-ghost' },
+          { title: 'Disabled', value: 'is-disabled' }
         ],
         layout: 'radio'
       }
     },
     {
-      title: 'Large Size',
-      name: 'isLarge',
-      type: 'boolean',
+      title: 'Size',
+      name: 'buttonSize',
+      type: 'string',
       options: {
-        layout: 'checkbox'
-      }
-    },
-    {
-      title: 'Full Width',
-      name: 'isBlock',
-      type: 'boolean',
-      options: {
-        layout: 'checkbox'
+        list: [
+          { title: 'Large', value: 'is-large' },
+          { title: 'Medium', value: 'is-medium' },
+          { title: 'Small', value: 'is-small' },
+          { title: 'Fullwidth', value: 'is-fullwidth' },
+        ],
+        layout: 'radio'
       }
     }
   ],

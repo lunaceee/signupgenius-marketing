@@ -22,6 +22,12 @@ export default {
       }
     },
     {
+      name: 'postThumbnail',
+      title: 'Post thumbnail',
+      type: 'figure',
+      description: '(required)',
+    },
+    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo'

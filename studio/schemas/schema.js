@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import page from "./documents/page"
+import landingPage from "./documents/page-landing"
 import post from "./documents/post"
 import homePage from './documents/page-home'
 import errorPage from './documents/page-error'
@@ -71,6 +72,7 @@ export default createSchema({
     /* 1: Document types */
     page,
     post,
+    landingPage,
     errorPage,
     homePage,
     seoSettings,

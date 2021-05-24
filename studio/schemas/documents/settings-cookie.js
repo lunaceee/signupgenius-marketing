@@ -26,7 +26,9 @@ export default {
       type: 'reference',
       to: [
         { type: 'homePage' },
-        { type: 'page' },
+        {
+          type: 'page'
+        },
       ],
       description: 'Show a link to "Learn More" about your cookie policy.'
     }
