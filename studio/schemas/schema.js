@@ -12,6 +12,7 @@ import post from "./documents/post"
 import homePage from './documents/page-home'
 import errorPage from './documents/page-error'
 import person from './documents/person'
+import downloadablePage from "./documents/page-downloadable"
 
 import seoSettings from './documents/settings-seo'
 import cookieSettings from './documents/settings-cookie'
@@ -52,6 +53,8 @@ import socialLink from './objects/social-link'
 import link from "./objects/link"
 import simple from "./objects/simple"
 import styles from "./objects/styles"
+import downloadable from "./objects/downloadable"
+import downloadableItem from "./objects/downloadable-item"
 
 import simplePortableText from './objects/portable-simple'
 import complexPortableText from './objects/portable-complex'
@@ -85,6 +88,7 @@ export default createSchema({
     person,
     tag,
     quotes,
+    downloadablePage,
 
     /* --------------- */
     /* 2: Module types */
@@ -120,6 +124,8 @@ export default createSchema({
     accordion,
     figure,
     youtube,
+    downloadable,
+    downloadableItem,
 
     navDropdown,
     navPage,

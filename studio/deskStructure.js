@@ -25,7 +25,11 @@ import {
   FiBox,
   FiLinkedin,
   FiTv,
+  FiSend,
+  FiDownload
 } from 'react-icons/fi'
+
+import { FaRegHandshake } from 'react-icons/fa'
 
 import SeoPreview from './components/previews/seo/seo-preview'
 
@@ -36,6 +40,7 @@ const previewURL =
 const hiddenDocTypes = (listItem) =>
   ![
     'homePage',
+    'downloadablePage',
     'errorPage',
     'page',
     'landingPage',
@@ -194,6 +199,14 @@ export default () =>
                     .id('careers')
                     .documentId('careers')
                     .schemaType('page')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiLinkedin),
               S.listItem()
@@ -203,6 +216,14 @@ export default () =>
                     .id('about')
                     .schemaType('page')
                     .documentId('about')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiSmile),
               S.listItem()
@@ -212,6 +233,14 @@ export default () =>
                     .id('pricing')
                     .schemaType('page')
                     .documentId('pricing')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiDollarSign),
               S.listItem()
@@ -221,8 +250,33 @@ export default () =>
                     .id('features')
                     .schemaType('page')
                     .documentId('features')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiBox),
+              S.listItem()
+                .title('Partners')
+                .child(
+                  S.editor()
+                    .id('partners')
+                    .schemaType('page')
+                    .documentId('partners')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
+                )
+                .icon(FaRegHandshake),
               S.listItem()
                 .title('Testimonial')
                 .child(
@@ -230,6 +284,14 @@ export default () =>
                     .id('testimonial')
                     .schemaType('page')
                     .documentId('testimonial')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiAward),
               S.listItem()
@@ -239,8 +301,50 @@ export default () =>
                     .id('presskit')
                     .schemaType('page')
                     .documentId('presskit')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
                 )
                 .icon(FiTv),
+              S.listItem()
+                .title('Downloadable')
+                .child(
+                  S.editor()
+                    .id('downloadable')
+                    .schemaType('downloadablePage')
+                    .documentId('downloadable')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
+                )
+                .icon(FiDownload),
+              S.listItem()
+                .title('Giving back')
+                .child(
+                  S.editor()
+                    .id('givingback')
+                    .schemaType('page')
+                    .documentId('givingback')
+                    .views([
+                      S.view.form().icon(EditIcon),
+                      S.view
+                        .component(SeoPreview)
+                        .options({ previewURL })
+                        .icon(EyeIcon)
+                        .title('SEO Preview'),
+                    ])
+                )
+                .icon(FiSend),
               S.listItem()
                 .title('Terms and conditions')
                 .child(
