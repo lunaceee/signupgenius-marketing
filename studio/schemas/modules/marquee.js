@@ -14,8 +14,40 @@ export default {
   ],
   fields: [
     {
-      name: 'marqueeItems',
-      type: 'items'
+      title: 'Items',
+      name: 'items',
+      type: 'array',
+      of: [
+        {
+          title: 'Text',
+          name: 'simple',
+          type: 'object',
+          fields: [
+            {
+              title: 'Text',
+              name: 'text',
+              type: 'string',
+              validation: Rule => Rule.required()
+            }
+          ],
+          preview: {
+            select: {
+              text: 'text'
+            },
+            prepare({ text }) {
+              return {
+                title: text
+              }
+            }
+          }
+        },
+        {
+          title: 'Photo',
+          name: 'photo',
+          type: 'figure'
+        }
+      ],
+      validation: Rule => Rule.min(1).required()
     },
     {
       title: 'Speed',

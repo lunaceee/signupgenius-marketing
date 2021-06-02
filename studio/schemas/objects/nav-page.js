@@ -16,7 +16,8 @@ export default {
       to: [
         { type: 'homePage' },
         { type: 'page' },
-        { type: 'landingPage' }
+        { type: 'landingPage' },
+        { type: 'downloadablePage' }
       ]
     }
   ]

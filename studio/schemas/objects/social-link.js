@@ -47,14 +47,11 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'Apple', value: 'Apple' },
+          { title: 'Pinterest', value: 'Pinterest' },
           { title: 'Facebook', value: 'Facebook' },
           { title: 'Instagram', value: 'Instagram' },
-          { title: 'Soundcloud', value: 'Soundcloud' },
-          { title: 'Spotify', value: 'Spotify' },
           { title: 'Twitter', value: 'Twitter' },
           { title: 'YouTube', value: 'YouTube' },
-          { title: 'Github', value: 'Github' }
         ]
       }
     },

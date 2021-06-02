@@ -1,5 +1,7 @@
 import { FiStar } from 'react-icons/fi'
 
+import ConditionalFields from '../../components/conditional-field'
+
 export default {
   title: 'Hero',
   name: 'hero',
@@ -24,13 +26,48 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'heroPhotos',
-      type: 'photos'
+      name: 'photos',
+      type: 'object',
+      inputComponent: ConditionalFields,
+      fields: [
+        {
+          title: 'Background Photo (mobile)',
+          name: 'mobilePhoto',
+          type: 'figure'
+        },
+        {
+          title: 'Background Photo (desktop)',
+          name: 'desktopPhoto',
+          type: 'figure'
+        }
+      ],
+      options: {
+        condition: (document, context) => context().bgType === 'photo'
+      }
     },
     {
-      name: 'heroVideos',
-      type: 'videos'
-    },
+      name: 'video',
+      type: 'object',
+      inputComponent: ConditionalFields,
+      fields: [
+        {
+          title: 'Background Video',
+          name: 'id',
+          type: 'string',
+          description:
+            'Alternatively, enter a vimeo ID to show a looping video instead'
+        },
+        {
+          title: 'Background Video Title',
+          name: 'title',
+          type: 'string',
+          description: 'Short title/description of the video'
+        }
+      ],
+      options: {
+        condition: (document, context) => context().bgType === 'video'
+      }
+    }
   ],
   preview: {
     select: {
