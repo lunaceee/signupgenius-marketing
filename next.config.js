@@ -6,6 +6,23 @@ const client = sanityClient({
   apiVersion: '2021-05-07'
 })
 
+// get redirects from Sanity for Vercel
+async function fetchSanityRedirects() {
+  const data = await client.fetch(
+    `*[_type == "redirect"]{ from, to, isPermanent }`
+  )
+
+  const redirects = data.map((redirect) => {
+    return {
+      source: `/${redirect.from}`,
+      destination: `/${redirect.to}`,
+      permanent: redirect.isPermanent,
+    }
+  })
+
+  return redirects
+}
+
 // see breakdown of code bloat
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
