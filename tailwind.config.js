@@ -57,6 +57,8 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       primary: 'var(--colorPrimaryBg)',
+      white: '#FFFFFF',
+      black: '#000000',
       pageBG: 'var(--pageBG)',
       pageText: 'var(--pageText)',
     },
