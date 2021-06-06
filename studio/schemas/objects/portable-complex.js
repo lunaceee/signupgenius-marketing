@@ -1,4 +1,5 @@
 // import '../../branding/skin.css?raw'
+import { FiLink2 } from 'react-icons/fi'
 
 import {
   Header1,
@@ -7,6 +8,8 @@ import {
   Header4,
   Button
 } from '../../components/block-renders'
+
+import ConditionalFields from '../../components/conditional-field'
 
 
 export default {
@@ -76,7 +79,7 @@ export default {
           }
         }
       ],
-      lists: [{ title: 'Bullet', value: 'bullet' }, {title: 'Number', value: 'number'}],
+      lists: [{ title: 'Bullet', value: 'bullet' }, { title: 'Number', value: 'number' }],
       marks: {
         decorators: [
           { title: 'Strong', value: 'strong' },
@@ -85,12 +88,79 @@ export default {
         annotations: [
           {
             title: 'Link',
-            name: 'ctaLink',
-            type: 'reference',
-            to: {type: 'link' },
+            name: 'link',
+            type: 'object',
             blockEditor: {
               render: Button
             },
+            icon: FiLink2,
+            fields: [
+              {
+                title: '(A) Internal Page',
+                name: 'page',
+                type: 'reference',
+                to: [{ type: 'homePage' }, { type: 'page' }]
+              },
+              {
+                title: '(B) External URL',
+                name: 'url',
+                type: 'url'
+              },
+              {
+                title: 'Style as Button?',
+                name: 'isButton',
+                type: 'boolean'
+              },
+              {
+                name: 'styles',
+                type: 'object',
+                inputComponent: ConditionalFields,
+                fields: [
+                  {
+                    title: 'Button Style',
+                    name: 'style',
+                    type: 'string',
+                    options: {
+                      list: [
+                        { title: 'Default', value: '' },
+                        { title: 'Primary', value: 'is-primary' },
+                        { title: 'Secondary', value: 'is-secondary' },
+                        { title: 'Tertiary', value: 'is-tertiary' },
+                        { title: 'Disabled', value: 'is-disabled' }
+                      ],
+                      layout: 'radio'
+                    }
+                  },
+                  {
+                    title: 'Large Size',
+                    name: 'isLarge',
+                    type: 'boolean',
+                    options: {
+                      layout: 'checkbox'
+                    }
+                  },
+                  {
+                    title: 'Small Size',
+                    name: 'isSmall',
+                    type: 'boolean',
+                    options: {
+                      layout: 'checkbox'
+                    }
+                  },
+                  {
+                    title: 'Full Width',
+                    name: 'isBlock',
+                    type: 'boolean',
+                    options: {
+                      layout: 'checkbox'
+                    }
+                  }
+                ],
+                options: {
+                  condition: (document, context) => context().isButton === true
+                }
+              }
+            ]
           }
         ]
       }

@@ -38,7 +38,6 @@ import sampleSignups from './modules/sign-ups'
 // Block types
 import freeform from './blocks/freeform'
 import accordions from './blocks/accordions'
-import adBlock from "./blocks/adBlock"
 
 // Object types
 import seo from './objects/seo'
@@ -47,9 +46,7 @@ import navDropdown from './objects/nav-dropdown'
 import navPage from './objects/nav-page'
 import navLink from './objects/nav-link'
 import socialLink from './objects/social-link'
-import link from "./objects/link"
 import simple from "./objects/simple"
-import styles from "./objects/styles"
 import downloadable from "./objects/downloadable"
 import downloadableItem from "./objects/downloadable-item"
 
@@ -104,16 +101,13 @@ export default createSchema({
     /* 3: Block types */
     freeform,
     accordions,
-    adBlock,
 
     /* ----------------------- */
     /* 4: Generic Object types */
     seo,
     simplePortableText,
     complexPortableText,
-    link,
     simple,
-    styles,
 
     accordion,
     figure,

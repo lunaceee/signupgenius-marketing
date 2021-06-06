@@ -59,10 +59,6 @@ export default {
       type: 'reference',
       to: { type: 'quotes' }
     },
-    {
-      name: 'adBlockParent',
-      type: 'adBlock',
-    }
   ],
   preview: {
     select: {
