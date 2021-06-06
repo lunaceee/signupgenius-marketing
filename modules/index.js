@@ -6,9 +6,7 @@ const Hero = dynamic(() => import('./hero'))
 const Marquee = dynamic(() => import('./marquee'))
 const DividerPhoto = dynamic(() => import('./divider-photo'))
 
-export const Module = ({
-  module,
-}) => {
+export const Module = ({ module }) => {
   const type = module._type
 
   switch (type) {

@@ -4,11 +4,11 @@ import { m, AnimatePresence } from 'framer-motion'
 import cx from 'classnames'
 
 import BlockContent from '@sanity/block-content-to-react'
-import { serializers } from '@lib/serializers'
+import { serializers } from '../lib/serializers'
 
-import { fadeAnim } from '@lib/animate'
+import { fadeAnim } from '../lib/animate'
 
-import Icon from '@components/icon'
+import Icon from '../components/icon'
 
 const Newsletter = ({ data = {} }) => {
   // Extract our module data
@@ -80,9 +80,9 @@ const Newsletter = ({ data = {} }) => {
               autoComplete="off"
               className="control--pot"
               aria-hidden="true"
-              ref={register}
+              {...register('value_name')}
             />
-            <div className="control--group is-inline is-clean">
+            {/* <div className="control--group is-inline is-clean">
               <div className={`control${errors.email ? ' has-error' : ''}`}>
                 <label htmlFor={`email-${id}`} className="control--label">
                   Email Address
@@ -130,7 +130,7 @@ const Newsletter = ({ data = {} }) => {
               >
                 {submit ? submit : 'Send'}
               </button>
-            </div>
+            </div> */}
 
             {terms && (
               <div className="control">
@@ -138,8 +138,7 @@ const Newsletter = ({ data = {} }) => {
                   id={`acceptTerms-${id}`}
                   name="acceptTerms"
                   type="checkbox"
-                  ref={register}
-                />
+                  {...register('value_name')} />
                 <label
                   htmlFor={`acceptTerms-${id}`}
                   className="control--label for-checkbox"

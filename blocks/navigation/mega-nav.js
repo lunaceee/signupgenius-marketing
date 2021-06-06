@@ -4,12 +4,11 @@ import { m } from 'framer-motion'
 import { useRect } from '@reach/rect'
 import cx from 'classnames'
 
-import { useSiteContext, useToggleMegaNav } from '@lib/context'
-import { isBrowser } from '@lib/helpers'
-import { swipeAnim } from '@lib/animate'
+import { useSiteContext, useToggleMegaNav } from '../../lib/context'
+import { isBrowser } from '../../lib/helpers'
+import { swipeAnim } from '../../lib/animate'
 
 import Menu from './menu'
-import FeaturedProducts from './featured-products'
 
 const MegaNavigation = ({ items = [], headerHeight }) => {
   const dropdowns = items.filter((item) => {
@@ -75,17 +74,13 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
                         onClick={() => toggleMegaNav(false)}
                       />
 
-                      {dropdown.featured && (
+                      {/* {dropdown.featured && (
                         <div className="mega-item--featured">
                           <div className="mega-item--featured-title">
                             <span>Featured</span>
                           </div>
-                          <FeaturedProducts
-                            products={dropdown.featured}
-                            onClick={() => toggleMegaNav(false)}
-                          />
                         </div>
-                      )}
+                      )} */}
                     </m.div>
                   </div>
                 </div>
@@ -98,9 +93,8 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
         className={cx('mega-nav--bg')}
         style={{
           '--h': meganav.isOpen ? activeNavRect?.height + headerHeight : 0,
-          '--hpx': `${
-            meganav.isOpen ? activeNavRect?.height + headerHeight : 0
-          }px`,
+          '--hpx': `${meganav.isOpen ? activeNavRect?.height + headerHeight : 0
+            }px`,
         }}
       />
 

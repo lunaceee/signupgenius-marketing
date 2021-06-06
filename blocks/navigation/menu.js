@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-import { getStaticRoute, getActive } from '@lib/routes'
-import CustomLink from '@components/link'
+import { getStaticRoute, getActive } from '../../lib/routes'
+import CustomLink from '../../components/link'
 
 import { MegaDropdownButton } from './mega-nav'
 import Dropdown from './dropdown'
