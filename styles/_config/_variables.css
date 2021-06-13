@@ -1,16 +1,43 @@
 /* Variables */
 :root {
-  --black: #000000;
-  --white: #ffffff;
+  /* Primary brand colors */
+  --brown-pod: hsl(21, 57%, 15%); /* #3B1F10 */
+  --indian-tan: hsl(24, 57%, 19%); /* #4C2B15 */
+  --russet: hsl(25, 61%, 29%); /* #77421D */
+  --mai-tai: hsl(25, 63%, 41%); /* #AA5E27 */
+  --carrot-orange: hsl(30, 92%, 54%); /* #F68A1E */
+  --supernova: hsl(39, 94%, 58%); /* #F9B431 */
+  --energy-yellow: hsl(48, 98%, 64%); /* #FDD847 */
+  --milan: hsl(54, 98%, 78%); /* #FEF492 */
 
-  --black-hsl: 0, 0%, 0%;
-  --white-hsl: 0, 0%, 100%;
+  /* neutrals */
+  --black: hsl(0, 0%, 0%); /* #000000 */
+  --darkerNero: hsl(0, 0%, 10%); /* #191919 */
+  --nero: hsl(0, 0%, 13%); /* #222222 */
+  --night-rider: hsl(0, 0%, 20%); /* #333333 */
+  --charcoal: hsl(0, 0%, 28%); /* #474747 */
+  --zambezi: hsl(0, 0%, 36%); /* #5c5c5c */
+  --dolphin: hsl(240, 0%, 44%); /* #707070 */
+  --nobel: hsl(0, 0%, 60%); /* #999999 */
+  --gainsboro: hsl(0, 0%, 88%); /* #e0e0e0 */
+  --white: hsl(0, 0%, 100%); /* #ffffff */
 
-  --pageBG: #f4f4f0;
-  --pageText: #000000;
+  --sherpa-blue: hsl(189, 89%, 19%); /* #054d5a */
+  --bali-hai: hsl(203, 12%, 61%); /* #919fa8 */
+  --spindle: hsl(205, 11%, 78%); /* #c0c7cc */
+  --bondi-blue: hsl(186, 88%, 36%); /* #0b9aab */
+  --regent-st-blue: hsl(193, 34%, 76%); /* #accdd6 */
+  --pattens-blue: hsl(192, 29%, 87%); /* #d3e3e7 */
+  --persian-red: hsl(1, 56%, 48%); /* #bf3836 */
+  --shilo: hsl(12, 58%, 75%); /* #e4a99a */
+  --coral-candy: hsl(15, 56%, 86%); /* #efd0c6 */
+  --ghost-white: #f1f1f3;
+  --celery: hsl(69, 55%, 48%); /* #acc037 */
+  --tusk: hsl(66, 47%, 77%); /* #dbe0aa */
+  --rice-flower: hsl(64, 43%, 88%); /* #ebedd2 */
 
-  --pageBG-hsl: 60, 14%, 95%;
-  --pageText-hsl: 0, 0%, 0%;
+  --pageBG: var(--white);
+  --pageText: var(--nero);
 }
 
 @custom-media --xs (min-width: 480px);
