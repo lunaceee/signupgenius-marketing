@@ -41,6 +41,7 @@ import accordions from './blocks/accordions'
 
 // Object types
 import seo from './objects/seo'
+import showAds from "./objects/showAds"
 
 import navDropdown from './objects/nav-dropdown'
 import navPage from './objects/nav-page'
@@ -108,6 +109,7 @@ export default createSchema({
     simplePortableText,
     complexPortableText,
     simple,
+    showAds,
 
     accordion,
     figure,

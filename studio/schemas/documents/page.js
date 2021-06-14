@@ -33,6 +33,11 @@ export default {
       ]
     },
     {
+      type: "showAds",
+      name: "adsPage",
+      title: "Turn on ads"
+    },
+    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo'

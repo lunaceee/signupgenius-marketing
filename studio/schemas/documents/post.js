@@ -28,6 +28,11 @@ export default {
       description: '(required)',
     },
     {
+      type: "showAds",
+      name: "adsPost",
+      title: "Turn on ads"
+    },
+    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo'
