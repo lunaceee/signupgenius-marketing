@@ -15,7 +15,7 @@ export default {
       title: 'Dropdown Items',
       name: 'dropdownItems',
       type: 'array',
-      of: [{ type: 'navPage' }, { type: 'navLink' }]
+      of: [{ type: 'navPage' }, { type: 'navLink' }, { type: 'navDropdown' }]
     },
     {
       name: 'featuredNote',
@@ -23,9 +23,22 @@ export default {
       options: {
         icon: FiAlertCircle,
         headline: 'Gotcha',
-        message: `Featured products are only for menus that appear in desktop "mega-navs".`,
+        message: `Featured articles are only for menus that appear in desktop "mega-navs".`,
         tone: 'caution'
       }
     },
+    {
+      title: 'Featured Articles',
+      name: 'featured',
+      type: 'array',
+      of: [
+        {
+          title: 'Article',
+          type: 'reference',
+          to: [{ type: 'post' }, { type: 'landingPage' }]
+        }
+      ],
+      validation: Rule => Rule.unique().max(2)
+    }
   ]
 }

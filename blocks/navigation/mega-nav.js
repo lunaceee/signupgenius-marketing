@@ -9,7 +9,7 @@ import { isBrowser } from '../../lib/helpers'
 import { swipeAnim } from '../../lib/animate'
 
 import Menu from './menu'
-import { FiChevronDown } from 'react-icons/fi'
+import FeaturedArticles from './featured-articles'
 
 const MegaNavigation = ({ items = [], headerHeight }) => {
   const dropdowns = items.filter((item) => {
@@ -51,6 +51,7 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
             const isActive =
               meganav.isOpen && meganav.activeID === dropdown._key
 
+
             return (
               <div
                 key={key}
@@ -74,14 +75,17 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
                         hasFocus={hasFocus && isActive}
                         onClick={() => toggleMegaNav(false)}
                       />
-
-                      {/* {dropdown.featured && (
+                      {dropdown.featured && (
                         <div className="mega-item--featured">
                           <div className="mega-item--featured-title">
                             <span>Featured</span>
                           </div>
+                          <FeaturedArticles
+                            articles={dropdown.featured}
+                            onClick={() => toggleMegaNav(false)}
+                          />
                         </div>
-                      )} */}
+                      )}
                     </m.div>
                   </div>
                 </div>
@@ -126,8 +130,8 @@ export const MegaDropdownButton = ({ title, id }) => {
     >
       {title}
       <span className="mega-toggle--icon">
-        {isActive ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg> :
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>}
+        {isActive ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg> :
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>}
       </span>
     </button>
   )

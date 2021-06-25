@@ -21,9 +21,10 @@
 @import 'modules/_header';
 @import 'modules/_mega-nav';
 @import 'modules/_footer';
+@import 'modules/_collection.css';
 
 @import 'modules/_hero';
 @import 'modules/_divider';
 
-/* HULL demo theme styles: */
+/* SUG demo theme styles: */
 @import '_sug';

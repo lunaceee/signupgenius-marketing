@@ -11,22 +11,6 @@ import CookieBar from '../modules/shared/cookie-bar'
 import Header from '../modules/shared/header'
 import Footer from '../modules/shared/footer'
 
-if (isBrowser) {
-  console.groupCollapsed(
-    '%c💀 Site Credits',
-    'display:block;padding:0.125em 1em;font-family:courier;font-size:14px;font-weight:bold;line-height:2;text-transform:uppercase;background:black;color:white;'
-  )
-  console.log(
-    '%cDesign by Nick DiMatteo \n– https://nickdimatteo.com',
-    'display:block;font-family:courier;font-size:12px;font-weight:bold;line-height:1;color:black;'
-  )
-  console.log(
-    '%cWeb Development by Nick DiMatteo \n– https://nickdimatteo.com',
-    'display:block;font-family:courier;font-size:12px;font-weight:bold;line-height:1;color:black;'
-  )
-  console.groupEnd()
-}
-
 const duration = 0.4
 const variants = {
   initial: {
