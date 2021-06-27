@@ -36,8 +36,6 @@ const FeatureCard = ({
 }) => {
   if (!article) return null
 
-  console.log(article.slug)
-
   return (
     <m.div
       initial="initial"
@@ -62,7 +60,7 @@ const FeatureCard = ({
         <div className="feature-card--header">
           <h2 className="feature-card--title">
             <Link
-              href={`${article.slug}`}
+              href={`/post/${article.slug}`}
               scroll={false}
             >
               <a className="feature-card--link" onClick={onClick}>

@@ -5,6 +5,8 @@ import Error from '../404'
 import Layout from '../../components/layout'
 import { getAllDocSlugs, getPage } from '../../lib/api'
 
+import Freeform from "../../blocks/freeform"
+import FeatureCard from "../../components/feature-card";
 
 const Post = ({ data }) => {
   const router = useRouter()
@@ -19,8 +21,26 @@ const Post = ({ data }) => {
     <>
       {!router.isFallback && (
         <Layout site={site} post={post}>
-          {post.title}
-          {post.postThumbnail.alt}
+          {post.blogPostTags.map(tag =>
+            <ul>
+              <li><a>{tag.title}</a></li>
+              <li>{tag.slug}</li>
+            </ul>
+          )}
+
+          <Freeform data={post} />
+
+          {post.relatedArticles.map((relatedArticle, key) =>
+            <ul>
+              <FeatureCard
+                key={key}
+                index={key}
+                article={relatedArticle}
+                hasVisuals={relatedArticle.thumbnail}
+                className="is-featured"
+              />
+            </ul>
+          )}
         </Layout>
       )}
     </>
