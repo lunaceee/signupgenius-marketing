@@ -18,17 +18,6 @@
   /* default style button */
   @apply inline-block relative bg-pageBG px-5 py-2 text-center rounded border-2 font-sans font-extrabold text-xs;
 
-  /* default: hover */
-  &:not(.is-primary):not(.is-inverted):not(.is-disabled):not(.is-soldout) {
-    &.is-active,
-    &:hover {
-      @apply bg-pageText border-pageText text-pageBG;
-    }
-  }
-
-  /* default: disabled */
-  &.is-disabled:not(.is-primary),
-
   /* primary style button */
   &.is-primary {
     @apply bg-primaryBg border-primaryBg text-black;
@@ -40,20 +29,15 @@
   /* primary: inverted */
   &.is-inverted {
     @apply bg-transparent border-2 border-primaryInvertedBorder border-solid text-primaryInvertedText;
-  }
-
-  /* white style button */
-  /* &.is-white {
-    @apply bg-white border-white text-black;
-  } */
-
-  &.is-secondary {
-    @apply bg-transparent text-current;
+    &.is-active,
+    &:hover {
+      @apply bg-primaryBgHover;
+    }
   }
 
   /* text-based button */
-  &.is-text {
-    @apply px-0 bg-transparent border-transparent;
+  &.is-ghost {
+    @apply px-0 bg-transparent border-transparent underline;
 
     &.is-disabled,
     &:not(.is-disabled):hover {
@@ -64,6 +48,10 @@
   /* large sized button */
   &.is-large {
     @apply text-xl font-normal px-8 py-5;
+
+    &.is-inverted {
+      @apply py-4.5;
+    }
   }
 }
 
