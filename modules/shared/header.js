@@ -16,7 +16,7 @@ import Icon from '../../components/icon'
 // Context helpers
 import { useSiteContext, useToggleMegaNav } from '../../lib/context'
 
-const Header = ({ data = {}, isTransparent }) => {
+const Header = ({ data = {} }) => {
   // expand our header data
   const {
     promo,
@@ -55,9 +55,7 @@ const Header = ({ data = {}, isTransparent }) => {
       <PromoBar data={promo} />
 
       <header
-        className={cx('header', {
-          'is-overlay': isTransparent,
-          'is-white': isTransparent && !meganav.isOpen && observerIsVisible,
+        className={cx('header', 'is-overlay', {
           'has-bg': !observerIsVisible,
         })}
       >
@@ -180,7 +178,7 @@ const Header = ({ data = {}, isTransparent }) => {
               ...(menuDesktopRight?.items || []),
             ]}
             headerHeight={
-              isTransparent && observerIsVisible ? headerRect?.height : false
+              observerIsVisible ? headerRect?.height : false
             }
           />
         </div>

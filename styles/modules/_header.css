@@ -9,6 +9,14 @@ a[href='#content'].skip-link {
 .header {
   @apply sticky top-0 inset-x-0 z-50;
 
+  &:hover {
+    @apply bg-white transition-colors duration-300;
+  }
+
+  &.is-active {
+    @apply bg-white;
+  }
+
   &.is-overlay {
     @apply h-0;
   }
@@ -18,18 +26,22 @@ a[href='#content'].skip-link {
   }
 
   &--inner {
-    @apply relative z-20 p-1 sm:p-4 bg-pageBG;
+    @apply relative z-20 p-1 sm:p-4 bg-pageBG transition-colors duration-300;
 
-    .is-overlay & {
+    &:hover {
+      @apply bg-white transition-colors duration-300;
+    }
+
+    .is-overlay {
       @apply bg-transparent transition-colors duration-300;
     }
 
     .has-bg & {
-      @apply bg-pageBG;
+      @apply bg-white;
     }
 
-    .is-white & {
-      @apply text-white delay-75;
+    .is-dark & {
+      @apply text-black delay-75;
     }
   }
 
@@ -41,8 +53,8 @@ a[href='#content'].skip-link {
     @apply absolute inset-x-0 bottom-0 z-20 border-t;
     transition: opacity 0s 0.6s linear;
 
-    .is-white & {
-      @apply border-white;
+    .is-dark & {
+      @apply border-black;
       transition-duration: 0.2s;
       transition-delay: 0s;
       /* &:not(.is-hidden) {

@@ -126,7 +126,7 @@ const Layout = ({ site = {}, page = {}, schema, children }) => {
       <CookieBar data={site.cookieConsent} />
 
       <m.div initial="initial" animate="enter" exit="exit" variants={variants}>
-        <Header data={site.header} isTransparent={page.hasTransparentHeader} />
+        <Header data={site.header} />
         <main id="content">{children}</main>
         <Footer data={site.footer} />
       </m.div>
