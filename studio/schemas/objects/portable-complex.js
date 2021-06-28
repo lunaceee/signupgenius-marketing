@@ -11,7 +11,6 @@ import {
 
 import ConditionalFields from '../../components/conditional-field'
 
-
 export default {
   title: 'Rich Text',
   name: 'complexPortableText',
@@ -90,6 +89,7 @@ export default {
             title: 'Link',
             name: 'link',
             type: 'object',
+            icon: FiLink2,
             blockEditor: {
               render: Button
             },
@@ -99,7 +99,12 @@ export default {
                 title: '(A) Internal Page',
                 name: 'page',
                 type: 'reference',
-                to: [{ type: 'homePage' }, { type: 'page' }]
+                to: [
+                  { type: 'homePage' },
+                  { type: 'page' },
+                  { type: 'landingPage' },
+                  { type: 'post' }
+                ]
               },
               {
                 title: '(B) External URL',
@@ -124,8 +129,8 @@ export default {
                       list: [
                         { title: 'Default', value: '' },
                         { title: 'Primary', value: 'is-primary' },
-                        { title: 'Secondary', value: 'is-secondary' },
-                        { title: 'Tertiary', value: 'is-tertiary' },
+                        { title: 'Primary Inverted', value: 'is-inverted' },
+                        { title: 'Ghost', value: 'is-ghost' },
                         { title: 'Disabled', value: 'is-disabled' }
                       ],
                       layout: 'radio'
