@@ -8,7 +8,7 @@
   --carrot-orange: hsl(30, 92%, 54%); /* #F68A1E */
   --supernova: hsl(39, 94%, 58%); /* #F9B431 */
   --energy-yellow: hsl(48, 98%, 64%); /* #FDD847 */
-  --milan: hsl(54, 98%, 78%); /* #FEF492 */
+  --Calamansi: hsl(53, 100%, 84%); /* #FFF5AF */
 
   /* neutrals */
   --black: hsl(0, 0%, 0%); /* #000000 */
@@ -36,8 +36,9 @@
   --tusk: hsl(66, 47%, 77%); /* #dbe0aa */
   --rice-flower: hsl(64, 43%, 88%); /* #ebedd2 */
 
-  --pageBG: var(--white);
+  --pageBG: var(--Calamansi);
   --pageText: var(--nero);
+  --megaNavBG: var(--white);
 }
 
 @custom-media --xs (min-width: 480px);

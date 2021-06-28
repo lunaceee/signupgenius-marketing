@@ -1,15 +1,15 @@
 *,
 ::before,
 ::after {
-  border: 0px solid;
+  border: 0px;
   box-sizing: border-box;
 }
- 
+
 ::before,
 ::after {
   vertical-align: inherit;
 }
- 
+
 html {
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%;
@@ -102,7 +102,7 @@ iframe {
 svg:not([fill]) {
   fill: currentColor;
 }
- 
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -119,7 +119,7 @@ select,
 textarea {
   margin: 0;
 }
- 
+
 button {
   overflow: visible;
   text-transform: none;
@@ -127,9 +127,9 @@ button {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -164,7 +164,7 @@ textarea {
   resize: vertical;
   resize: block;
 }
- 
+
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
@@ -187,7 +187,7 @@ textarea {
 details {
   display: block;
 }
- 
+
 summary {
   display: list-item;
 }
@@ -211,9 +211,8 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
 }
- 
 
-[aria-busy="true"] {
+[aria-busy='true'] {
   cursor: progress;
 }
 
@@ -221,16 +220,16 @@ textarea,
   cursor: pointer;
 }
 
-[aria-disabled="true"],
+[aria-disabled='true'],
 [disabled] {
   cursor: not-allowed;
 }
 
-[aria-hidden="false"][hidden] {
+[aria-hidden='false'][hidden] {
   display: initial;
 }
 
-[aria-hidden="false"][hidden]:not(:focus) {
+[aria-hidden='false'][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }

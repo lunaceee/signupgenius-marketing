@@ -57,7 +57,11 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       primaryBg: 'var(--carrot-orange)',
-      primaryText: 'var(--nero)',
+      primaryBgHover: 'var(--supernova)',
+      primaryText: 'var(--black)',
+      primaryInvertedBg: 'var(--transparent)',
+      primaryInvertedText: 'var(--carror-orange)',
+      primaryInvertedBorder: 'var(--brown-pod)',
       white: 'var(--white)',
       black: 'var(--black)',
       pageBG: 'var(--pageBG)',
@@ -66,11 +70,11 @@ module.exports = {
       infoBg: 'var(--regent-st-blue)',
       errorBg: 'var(--persian-red)',
       errorText: 'var(--ghost-white)',
-      errorBgInversed: 'var(--ghost-white)',
-      errorTextInversed: 'var(--persian-red)',
+      errorBgInverted: 'var(--ghost-white)',
+      errorTextInverted: 'var(--persian-red)',
       successBg: 'var(--celery)',
       successText: 'var(--nero)',
-      warningBg: 'var(--milan)',
+      warningBg: 'var(--Calamansi)',
       warningText: 'var(--brown-pod)',
       disabled: 'var(--gainsboro)'
     },
@@ -81,9 +85,12 @@ module.exports = {
       lg: '1200px',
       xl: '1600px',
     },
+    fontFamily: {
+      sans: 'Lato, Arial, sans-serif'
+    },
     extend: {
       fontFamily: {
-        inherit: 'inherit',
+        inherit: 'inherit'
       },
       fontSize: {
         xxs: '.625rem',

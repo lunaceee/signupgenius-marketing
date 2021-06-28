@@ -37,12 +37,12 @@
   }
 
   &--backdrop {
-    @apply fixed inset-0 z-0 bg-black bg-opacity-40 pointer-events-none opacity-0;
+    @apply fixed top-0 inset-x-0 bottom-1 z-0 bg-black bg-opacity-40 pointer-events-none opacity-0;
     transition: opacity 0.15s linear;
 
     &.is-active {
-      @apply pointer-events-auto opacity-100;
-      backdrop-filter: blur(6px);
+      @apply pointer-events-auto opacity-20;
+      filter: blur(6px);
     }
   }
 }
@@ -79,7 +79,7 @@
   ul {
     a,
     button {
-      @apply inline-block text-lg leading-normal hover:opacity-40 transition-opacity duration-200;
+      @apply inline-block text-2xl italic leading-10 hover:opacity-40 transition-opacity duration-200;
     }
   }
 

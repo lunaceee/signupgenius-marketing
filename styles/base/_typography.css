@@ -1,5 +1,5 @@
 @layer base {
-  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
   html,
   body {
@@ -76,7 +76,7 @@
   hr {
     @apply my-16 mx-0 border-0 h-px bg-pageText;
   }
-  
+
   ::-moz-selection {
     background: var(--pageText);
     color: var(--pageBG);
@@ -109,7 +109,7 @@ details {
     .is-inverted & {
       outline-color: var(--pageBG);
     }
-    
+
     body:not(.is-tabbing) & {
       outline: none;
     }
@@ -129,12 +129,12 @@ ul {
     &:not(:last-child) {
       @apply mb-6;
     }
-    
+
     li {
       @apply mb-1;
-      
+
       &::before {
-        content: "+";
+        content: '+';
         @apply inline-block relative -ml-4 w-4;
       }
     }
@@ -156,11 +156,7 @@ h1,
   }
 
   .hero & {
-    font-size: clamp(
-      2.25rem,
-      calc(1rem + 3.5vw),
-      5rem
-    )
+    font-size: clamp(2.25rem, calc(1rem + 3.5vw), 5rem);
   }
 }
 

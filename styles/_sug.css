@@ -1,7 +1,13 @@
 /* ----- Mixins ----- */
 
 .is-hashed {
-  background-image: repeating-linear-gradient(-45deg, hsla(var(--pageText-hsl), .5) 0, hsla(var(--pageText-hsl), .5) 1px, transparent 0, transparent 50%);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    hsla(var(--pageText-hsl), 0.5) 0,
+    hsla(var(--pageText-hsl), 0.5) 1px,
+    transparent 0,
+    transparent 50%
+  );
   background-size: 8px 8px;
   background-repeat: repeat;
 }
@@ -10,51 +16,40 @@
 
 .btn {
   /* default style button */
-  @apply inline-block relative bg-pageBG px-5 py-2 text-center rounded-full border font-sans font-semibold text-xs;
+  @apply inline-block relative bg-pageBG px-5 py-2 text-center rounded border-2 font-sans font-extrabold text-xs;
 
   /* default: hover */
-  &:not(.is-primary):not(.is-white):not(.is-disabled):not(.is-soldout) {
+  &:not(.is-primary):not(.is-inverted):not(.is-disabled):not(.is-soldout) {
     &.is-active,
     &:hover {
       @apply bg-pageText border-pageText text-pageBG;
     }
   }
 
-  /* default: inverted */
-  &.is-inverted {
-    @apply bg-pageText border-pageBG text-pageBG;
-
-    &:not(.is-primary):not(.is-white):not(.is-disabled):not(.is-soldout) {
-      &.is-active,
-      &:hover {
-        @apply bg-pageBG border-pageBG text-pageText;
-      }
-    }
-  }
-
   /* default: disabled */
   &.is-disabled:not(.is-primary),
-  &.is-soldout {
-    @apply bg-pageBG opacity-20;
-  }
-
 
   /* primary style button */
   &.is-primary {
-    @apply bg-pageText border-pageText text-pageBG;
-
-    /* primary: inverted */
-    &.is-inverted {
-      @apply bg-pageBG border-pageBG text-pageText;
+    @apply bg-primaryBg border-primaryBg text-black;
+    &:hover {
+      @apply bg-primaryBgHover border-primaryBgHover text-black;
     }
   }
 
-
-  /* white style button */
-  &.is-white {
-    @apply bg-white border-white text-black;
+  /* primary: inverted */
+  &.is-inverted {
+    @apply bg-transparent border-2 border-primaryInvertedBorder border-solid text-primaryInvertedText;
   }
 
+  /* white style button */
+  /* &.is-white {
+    @apply bg-white border-white text-black;
+  } */
+
+  &.is-secondary {
+    @apply bg-transparent text-current;
+  }
 
   /* text-based button */
   &.is-text {
@@ -66,19 +61,17 @@
     }
   }
 
-
   /* large sized button */
   &.is-large {
-    @apply text-2xl font-normal px-7;
+    @apply text-xl font-normal px-8 py-5;
   }
 }
-
 
 /* ----- Marquees ----- */
 
 .marquee {
   @apply border-b;
-  
+
   &--item {
     @apply flex;
   }
