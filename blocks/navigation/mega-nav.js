@@ -51,7 +51,6 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
             const isActive =
               meganav.isOpen && meganav.activeID === dropdown._key
 
-
             return (
               <div
                 key={key}
@@ -75,7 +74,7 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
                         hasFocus={hasFocus && isActive}
                         onClick={() => toggleMegaNav(false)}
                       />
-                      {dropdown.featured && (
+                      {dropdown.featured.length !== 0 && (
                         <div className="mega-item--featured">
                           <div className="mega-item--featured-title">
                             <span>Featured</span>
