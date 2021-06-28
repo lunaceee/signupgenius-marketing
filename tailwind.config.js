@@ -103,6 +103,9 @@ module.exports = {
         80: 80,
         90: 90,
       },
+      padding: {
+        '4.5': '18px'
+      },
     },
   },
   variants: {
