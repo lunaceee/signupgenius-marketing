@@ -10,7 +10,11 @@ body {
 }
 
 .section {
-  @apply relative px-4 py-12 sm:p-8 md:py-16 lg:py-36 border-b;
+  @apply relative px-4 py-12 sm:p-10 md:py-16 lg:py-20 border-b;
+
+  &:first-child {
+    @apply pt-20 sm:pt-32 lg:pt-40;
+  }
 
   &--content {
     @apply mx-auto;

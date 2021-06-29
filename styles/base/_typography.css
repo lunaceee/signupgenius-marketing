@@ -32,26 +32,26 @@
   /* Headlines */
   h1,
   .is-h1 {
-    @apply m-0 text-5xl font-normal leading-tight;
+    @apply m-0 text-3xl xl:text-5xl font-bold leading-tight;
   }
 
   h2,
   .is-h2 {
-    @apply m-0 text-4xl font-normal leading-tight;
+    @apply m-0 text-2xl xl:text-4xl font-normal leading-tight;
   }
 
   h3,
   .is-h3 {
-    @apply m-0 text-3xl font-normal leading-tight;
+    @apply m-0 text-xl xl:text-3xl font-normal leading-tight;
   }
 
   h4,
   .is-h4 {
-    @apply m-0 text-2xl font-normal leading-snug;
+    @apply m-0 text-lg xl:text-2xl font-normal leading-snug;
   }
 
   h5 {
-    @apply m-0 text-xl font-normal leading-tight;
+    @apply m-0 text-sm xl:text-xl font-normal leading-tight;
   }
 
   h6 {
