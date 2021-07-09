@@ -60,6 +60,7 @@ export const Button = ({ isButton, styles, children }) => {
     <span
       className={cx('btn', styles?.style, {
         'is-large': styles?.isLarge,
+        'is-small': styles?.isSmall,
         'is-block': styles?.isBlock
       })}
     >

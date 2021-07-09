@@ -129,7 +129,7 @@ export default {
                       list: [
                         { title: 'Default', value: '' },
                         { title: 'Primary', value: 'is-primary' },
-                        { title: 'Primary Inverted', value: 'is-inverted' },
+                        { title: 'Inverted', value: 'is-inverted' },
                         { title: 'Ghost', value: 'is-ghost' },
                         { title: 'Disabled', value: 'is-disabled' }
                       ],

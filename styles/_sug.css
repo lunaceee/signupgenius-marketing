@@ -47,10 +47,19 @@
 
   /* large sized button */
   &.is-large {
-    @apply text-xl font-normal px-8 py-5;
+    @apply text-xl font-semibold px-8 py-5;
 
     &.is-inverted {
       @apply py-4.5;
+    }
+  }
+
+  /* small sized button */
+  &.is-small {
+    @apply text-base font-semibold px-4;
+
+    &.is-inverted {
+      @apply py-3.5;
     }
   }
 }

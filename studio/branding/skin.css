@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-  --brand-primary: #000;
+  --brand-primary: hsl(30, 92%, 54%);
   --brand-primary--inverted: #fff;
   --brand-secondary: #000;
   --brand-secondary--inverted: #fff;
@@ -9,8 +9,10 @@
   --main-navigation-color: var(--brand-secondary);
   --main-navigation-color--inverted: var(--brand-secondary--inverted);
 
-  --theme-pageBG: #f4f4f0;
-  --theme-pageText: #000000;
+  --theme-pageBG: hsl(53, 100%, 84%);
+  --theme-pageText: hsl(0, 0%, 10%);
+  --theme-primaryBG: var(--brand-primary);
+  --theme-primaryText: var(;--theme-pageText);
 }
 
 /* correctly style active state on dark navbars */
@@ -56,8 +58,7 @@ li[class*='moving'] * {
   display: inline-block;
   position: relative;
   padding: 0.5rem 1.25rem;
-  background: var(--theme-pageBG) !important;
-  color: var(--theme-pageText) !important;
+  color: var(--theme-primaryText) !important;
   border: 1px solid;
   border-radius: 9999px;
   box-shadow: 0 0 0 5px var(--theme-pageBG);
@@ -71,18 +72,25 @@ li[class*='moving'] * {
 }
 
 .btn.is-primary {
-  background: var(--theme-pageText) !important;
-  color: var(--theme-pageBG) !important;
-  border-color: var(--theme-pageText);
+  background: var(--theme-primaryBG) !important;
+  color: var(--theme-primaryText) !important;
+  border-color: var(--theme-primaryBG);
 }
 
-.btn.is-white {
-  background: white !important;
-  color: var(--theme-pageText) !important;
-  border-color: white;
+.btn.is-inverted {
+  background: transparent !important;
+  color: var(--theme-primaryText) !important;
+  border-color: var(--theme-primaryText);
 }
 
 .btn.is-large {
+  padding: 0.5rem 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.btn.is-small {
   padding: 0.5rem 1.75rem;
   font-size: 1.5rem;
   line-height: 2rem;

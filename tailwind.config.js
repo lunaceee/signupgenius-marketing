@@ -58,7 +58,7 @@ module.exports = {
       current: 'currentColor',
       primaryBg: 'var(--carrot-orange)',
       primaryBgHover: 'var(--supernova)',
-      primaryText: 'var(--black)',
+      primaryText: 'var(--darkerNero)',
       primaryInvertedBg: 'var(--transparent)',
       primaryInvertedText: 'var(--carror-orange)',
       primaryInvertedBorder: 'var(--brown-pod)',
