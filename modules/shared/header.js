@@ -55,12 +55,15 @@ const Header = ({ data = {} }) => {
       <PromoBar data={promo} />
 
       <header
-        className={cx('header', 'is-overlay', {
+        className={cx('header', {
+          'is-white': meganav.isOpen && observerIsVisible,
           'has-bg': !observerIsVisible,
         })}
       >
         <div ref={headerRef} className="header--outer">
-          <div className="header--inner">
+          <div className={cx("header--inner", {
+            'is-white': meganav.isOpen,
+          })}>
             <div className="header--content">
               <div className="logo">
                 <Link href="/" scroll={false}>
@@ -153,6 +156,12 @@ const Header = ({ data = {} }) => {
                   </div>
 
                   <div className="menu-right">
+                    {/* {Todo: Update CTA url} */}
+                    <Link href="/">
+                      <a className="btn is-primary is-medium mx-6" aria-label="Create a signup">
+                        Create a signup
+                      </a>
+                    </Link>
                     {menuDesktopRight?.items && (
                       <Menu
                         items={menuDesktopRight.items}
@@ -160,6 +169,11 @@ const Header = ({ data = {} }) => {
                         useMegaNav
                       />
                     )}
+                    <Link href="/">
+                      <a aria-label="Help center">
+                        <Icon name="Help" id="header" viewBox="0 0 200 200" />
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </nav>

@@ -9,14 +9,8 @@
       @apply absolute top-full inset-x-0 z-10 h-px bg-pageBG;
       will-change: transform;
       transform-origin: 0 0;
-      transform: scaleY(var(--h));
       transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       content: '';
-
-      /* account for the header when styled as an overlay that hasn't scrolled */
-      .is-overlay:not(.has-bg) & {
-        @apply top-0;
-      }
     }
 
     &::after {
@@ -24,11 +18,6 @@
       transform: translate3d(0, var(--hpx), 0);
       transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       content: '';
-
-      /* account for the header when styled as an overlay that hasn't scrolled */
-      .is-overlay:not(.has-bg) & {
-        @apply top-0;
-      }
     }
   }
 

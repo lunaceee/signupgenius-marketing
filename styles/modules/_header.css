@@ -17,10 +17,6 @@ a[href='#content'].skip-link {
     @apply bg-white;
   }
 
-  &.is-overlay {
-    @apply h-0;
-  }
-
   &--outer {
     @apply relative;
   }
@@ -32,11 +28,11 @@ a[href='#content'].skip-link {
       @apply bg-white transition-colors duration-300;
     }
 
-    .is-overlay {
-      @apply bg-transparent transition-colors duration-300;
+    .has-bg & {
+      @apply bg-white;
     }
 
-    .has-bg & {
+    .is-white & {
       @apply bg-white;
     }
 
@@ -87,10 +83,6 @@ a[href='#content'].skip-link {
 
 .menu-toggle {
   @apply sm:hidden absolute inset-y-0 left-0 z-60 clean-btn p-4 bg-transparent;
-
-  .is-overlay:not(.has-bg) & {
-    @apply transition-colors duration-300;
-  }
 
   &.is-open {
     @apply text-pageText;

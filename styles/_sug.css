@@ -54,6 +54,15 @@
     }
   }
 
+  /* Medium sized button */
+  &.is-medium {
+    @apply text-xl font-semibold px-6 py-3;
+
+    &.is-inverted {
+      @apply py-4.5;
+    }
+  }
+
   /* small sized button */
   &.is-small {
     @apply text-base font-semibold px-4;
