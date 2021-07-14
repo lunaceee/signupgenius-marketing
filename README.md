@@ -1,7 +1,7 @@
 <p align="center">
-<img src="public/sug-logo.svg" align="center" height="100" />
+<img src="public/sug-logo.svg" align="center" height="80" />
 </p>
-
+</br>
 <p align="center">
   <a href="#-automatic-set-up">Set Up</a> •
   <a href="#-spin-up">Spin Up</a> •
@@ -10,8 +10,6 @@
 <br />
 
 # Set Up
-
-Clone this repository from your GitHub account with the [Use this template](https://github.com/ndimatteo/HULL/generate) button
 
 ### 1) Sanity
 
@@ -65,4 +63,6 @@ SANITY_API_TOKEN=XXXXXX
 
 ### Sanity
 
-This is an easy one, you can simply run `sanity deploy` from the `/studio` folder in your project. Select a subdomain you want; your Studio is now accessible from the web. This is where I'll invite the client to manage the project so they can both add billing info and begin editing content.
+You can simply run `sanity deploy` from the `/studio` folder in your project. Select a subdomain you want; your Studio is now accessible from the web. This is where I'll invite the client to manage the project so they can both add billing info and begin editing content.
+
+Link to the deployed studio: https://signupgeniusmkt.sanity.studio/
