@@ -156,7 +156,7 @@ const Header = ({ data = {} }) => {
                   </div>
 
                   <div className="menu-right">
-                    {/* {Todo: Update CTA url} */}
+                    {/* {TODO: Update CTA url} */}
                     <Link href="/">
                       <a className="btn is-primary is-medium mx-6" aria-label="Create a signup">
                         Create a signup
@@ -169,9 +169,10 @@ const Header = ({ data = {} }) => {
                         useMegaNav
                       />
                     )}
+                    {/* TODO: change url */}
                     <Link href="/">
-                      <a aria-label="Help center">
-                        <Icon name="Help" id="header" viewBox="0 0 200 200" />
+                      <a className="help--link" aria-label="Help center">
+                        <Icon name="Help" id="header" viewBox="0 0 24 24" />
                       </a>
                     </Link>
                   </div>

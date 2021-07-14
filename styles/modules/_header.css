@@ -81,6 +81,18 @@ a[href='#content'].skip-link {
   }
 }
 
+.help {
+  @apply flex flex-col relative z-10;
+
+  &--link {
+    @apply block p-2;
+
+    svg {
+      @apply block fill-current w-auto h-8;
+    }
+  }
+}
+
 .menu-toggle {
   @apply sm:hidden absolute inset-y-0 left-0 z-60 clean-btn p-4 bg-transparent;
 
